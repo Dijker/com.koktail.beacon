@@ -1,9 +1,9 @@
 {
 	"id": "com.koktail.beacon",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"compatibility": ">=1.5.8",
 	"sdk": 2,
-	"brandColor": "#FF0000",
+	"brandColor": "#11437c",
 	"name": {
 		"en": "Beacon"
 	},
@@ -42,18 +42,18 @@
 	},
 	"drivers": [
 		{
-			"id": "RDL51822",
+			"id": "beacon",
 			"name": {
-				"en": "RDL51822",
-				"nl": "RDL51822"
+				"en": "beacon",
+				"nl": "beacon"
 			},
 			"class": "sensor",
 			"capabilities": [
 				"detect"
 			],
 			"images": {
-				"small": "drivers/RDL51822/assets/images/small.png",
-				"large": "drivers/RDL51822/assets/images/large.png"
+				"small": "drivers/beacon/assets/images/small.png",
+				"large": "drivers/beacon/assets/images/large.png"
 			},
 			"pair": [
 				{
@@ -67,7 +67,25 @@
 					"id": "add",
 					"template": "add_devices"
 				}
-			]
+			],
+			"mobile": {
+				"components": [
+					{
+						"id": "icon"
+					},
+					{
+						"id": "sensor",
+						"capabilities": [
+							"detect"
+						],
+						"options": {
+							"icons": {
+								"detect": "/assets/detect.svg"
+							}
+						}
+					}
+				]
+			}
 		}
 	],
 	"flow": {
@@ -135,7 +153,7 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=RDL51822"
+						"filter": "driver_id=beacon"
 					}
 				]
 			},
@@ -162,7 +180,27 @@
 					{
 						"name": "device",
 						"type": "device",
-						"filter": "driver_id=RDL51822"
+						"filter": "driver_id=beacon"
+					}
+				]
+			},
+			{
+				"id": "beacon_discovered",
+				"title": {
+					"en": "A beacon has been discovered",
+					"nl": "Een baken is ontdekt"
+				},
+				"tokens": [
+					{
+						"name": "beacon",
+						"title": {
+							"en": "beacon",
+							"nl": "baken"
+						},
+						"example": {
+							"en": "Beacon 1",
+							"nl": "Baken 1"
+						}
 					}
 				]
 			}
