@@ -1,0 +1,29 @@
+{
+  "id": "beacon",
+  "name": {
+    "en": "Beacon",
+    "nl": "Beacon"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "detect",
+    "signal_strength"
+  ],
+  "images": {
+    "small": "drivers/beacon/assets/images/small.png",
+    "large": "drivers/beacon/assets/images/large.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add"
+      }
+    },
+    {
+      "id": "add",
+      "template": "add_devices"
+    }
+  ]
+}
