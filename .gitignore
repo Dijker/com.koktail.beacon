@@ -18,3 +18,5 @@
 .idea/php.xml
 
 .idea/libraries
+build/*
+node_modules
